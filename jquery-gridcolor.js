@@ -82,11 +82,10 @@
 		colors : ["#777777", "#999999", "#bbbbbb", "#555555"],
 		columns : 3,
 		cssProperty : "background-color",
-		defaultColor : 
-			{
-				"background-color" : "rgb(255, 255, 255)",
-				"color" : "rgb(85, 85, 85)"
-			},
+		defaultColor : {
+			"background-color" : "rgb(255, 255, 255)",
+			"color" : "rgb(85, 85, 85)"
+		},
 		itemSelector : ".item"
 	};
 	
