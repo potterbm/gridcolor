@@ -31,7 +31,7 @@ $(".item-container").gridcolor({
 
 ### Options
 
-`classMode` - A truthy value. If set to true the color list will be treated as a list of classes to add to the element.
+`classMode` - A truthy value. If set to true the color list will be treated as a list of classes to add to the element. Defaults to `false`.
 
 `colors` - An array of colors. See [the list of colors](#the-list-of-colors) for details. The default colors are shades of grey. There are not 50 of them.
 
