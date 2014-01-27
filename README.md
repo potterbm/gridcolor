@@ -47,14 +47,14 @@ The list of colors should be in the following form: `[ <color>, <color>, <color>
 
 If a string is passed, it will be converted into an object with the form: `{ cssProperty: string }` where `cssProperty` is the value of that option.
 
-If an object is passed it should be a valid object that can be passed to `$.css()` and should define, at the very least, a value for `cssProperty`.
+If an object is passed it should be an object that would be valid to pass to `$.css()` (since that's what happens) and should define, at the very least, a value for `cssProperty`.
 
 
 ## Utility functions
 
 ### `hexToRGB`
 
-The gridcolor plugin includes a utility function to convert from hex color values to RGB notation. The function is called `hexToRGB` and can be used as follows:
+This function converts from hex color codes to RGB notation. The function is called `hexToRGB` and can be used as follows:
 
 ```javascript
 $.gridcolor.hexToRGB("#000000"); // Returns "rgb(0, 0, 0)"

@@ -6,13 +6,7 @@
 		settings.columns = parseInt(settings.columns);
 		
 		for(var h = 0; h < settings.colors.length; h++) {
-			console.log(h);
-			console.log(settings.colors[h]);
-			console.log(typeof(settings.colors[h]));
-			console.log(typeof(settings.colors[h]) == "object");
-			console.log(typeof(settings.colors[h]) != "object");
 			if(typeof(settings.colors[h]) != "object") {
-				console.log('not object');
 				
 				// Convert each string to an object that can be passed to $.css();
 				if(typeof(settings.colors[h]) != "string") {
@@ -31,14 +25,16 @@
 				
 				// Standardize all object values to rgb(red, green, blue) format
 				for(prop in settings.colors[h]) {
-					if(settings.colors[h].hasOwnProperty(prop) && settings.colors[h][prop].charAt(0) == '#') {
-						settings.colors[h][prop] = $.fn.gridcolor.hexToRGB(settings.colors[h][prop].slice(1));
+					if(settings.colors[h].hasOwnProperty(prop)) {
+						
+						if(settings.colors[h][prop].charAt(0) == '#') {
+							settings.colors[h][prop] = $.fn.gridcolor.hexToRGB(settings.colors[h][prop].slice(1));
+						}
 					}
 				}
 			}
 			
 		}
-		
 		
 		return this.each(function() {
 			$items = $(this).children(settings.itemSelector);
@@ -62,6 +58,7 @@
 						
 						// Rotate the list of colors
 						settings.colors.push(settings.colors.shift());
+						return true;
 					}
 				}
 				
@@ -90,14 +87,11 @@
 	};
 	
 	$.fn.gridcolor.hexToRGB = function(hex) {
-			
-   		var bigint = parseInt(hex, 16);
-   		var r = (bigint >> 16) & 255;
-   		var g = (bigint >> 8) & 255;
-   		var b = bigint & 255;
-	    
-   		console.log(hex + " => " + "rgb(" + r + ", " + g + ", " + b + ")");
-	    
-   		return "rgb(" + r + ", " + g + ", " + b + ")";
+		var bigint = parseInt(hex, 16);
+		var r = (bigint >> 16) & 255;
+		var g = (bigint >> 8) & 255;
+		var b = bigint & 255;
+		
+		return "rgb(" + r + ", " + g + ", " + b + ")";
 	};
 }(jQuery));
