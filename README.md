@@ -18,7 +18,7 @@ The simplest example would work with HTML like this:
 </div>
 ```
 
-This javascript would then make each element with the class `.item` be either red, yellow, or blue.
+This javascript would then make each element with the class `.item` be either red, green, or blue.
 
 ```javascript
 $(".item-container").gridcolor({
@@ -30,6 +30,8 @@ $(".item-container").gridcolor({
 ## Configuration
 
 ### Options
+
+`classMode` - A truthy value. If set to true the color list will be treated as a list of classes to add to the element.
 
 `colors` - An array of colors. See [the list of colors](#the-list-of-colors) for details. The default colors are shades of grey. There are not 50 of them.
 
@@ -45,9 +47,11 @@ $(".item-container").gridcolor({
 
 The list of colors should be in the following form: `[ <color>, <color>, <color>, ... ]` where each color is either a string or an object.
 
-If a string is passed, it will be converted into an object with the form: `{ cssProperty: string }` where `cssProperty` is the value of that option.
+If `classMode` is set to true each item in the array must be a string containing at least one class name. If there are multiple class names they must be separated by spaces.
 
-If an object is passed it should be an object that would be valid to pass to `$.css()` (since that's what happens) and should define, at the very least, a value for `cssProperty`.
+If `classMode` is set to false and a string is passed, it will be converted into an object with the form: `{ cssProperty: string }` where `cssProperty` is the value of that option.
+
+If `classMode` is set to false an object is passed it should be an object that would be valid to pass to `$.css()` (since that's what happens) and should define, at the very least, a value for `cssProperty`.
 
 
 ## Utility functions
