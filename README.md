@@ -6,22 +6,6 @@ The gridcolor plugin is a jQuery plugin to color tiles in a grid. It accepts any
 
 The gridcolor plugin is fairly easy to use. All it requires is a list of colors and a class that tells it which elements to color.
 
-### Heading 3
-
-Some text
-
-#### Heading 4
-
-Some more text
-
-##### Heading 5
-
-Even more text
-
-###### Heading 6
-
-Final text
-
 The simplest example would work with HTML like this:
 
 ```html
@@ -47,7 +31,7 @@ $(".item-container").gridcolor({
 
 ### Options
 
-`colors` - `[ color1, color2, color3, ... ]` See [the list of colors](#the-list-of-colors) for details. The default colors are shades of grey. There are not 50 of them.
+`colors` - An array of colors. See [the list of colors](#the-list-of-colors) for details. The default colors are shades of grey. There are not 50 of them.
 
 `columns` - The number of columns in the grid. This is used to prevent elements from having the same color as those directly above them. Defaults to `3`.
 
