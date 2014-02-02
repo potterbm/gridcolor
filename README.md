@@ -31,17 +31,17 @@ $(".item-container").gridcolor({
 
 ### Options
 
-`classMode` - A truthy value. If set to true the color list will be treated as a list of classes to add to the element. Defaults to `false`.
+* `classMode` - A truthy value. If set to true the color list will be treated as a list of classes to add to the element. Defaults to `false`.
 
-`colors` - An array of colors. See [the list of colors](#the-list-of-colors) for details. The default colors are shades of grey. There are not 50 of them.
+* `colors` - An array of colors. See [the list of colors](#the-list-of-colors) for details. The default colors are shades of grey. There are not 50 of them.
 
-`columns` - The number of columns in the grid. This is used to prevent elements from having the same color as those directly above them. Defaults to `3`.
+* `columns` - The number of columns in the grid. This is used to prevent elements from having the same color as those directly above them. Defaults to `3`.
 
-`cssProperty` - The property used to determine if two elements have the same color or not. Defaults to `"background-color"`.
+* `cssProperty` - The property used to determine if two elements have the same color or not. Defaults to `"background-color"`.
 
-`defaultColor` - When everything goes wrong, this is the object that will be used to color whatever tile is making problems. Defaults to `{ "background-color": "rgb(255, 255, 255)", "color": "rgb(85, 85, 85)" }`.
+* `defaultColor` - When everything goes wrong, this is the object that will be used to color whatever tile is making problems. Defaults to `{ "background-color": "rgb(255, 255, 255)", "color": "rgb(85, 85, 85)" }`.
 
-`itemSelector` - The CSS selector used to find tiles within the element that `$.gridcolor()` is called on. This will be passed to jQuery, so anything accepted by the jQuery object is valid in this option. Defaults to `".item"`.
+* `itemSelector` - The CSS selector used to find tiles within the element that `$.gridcolor()` is called on. This will be passed to jQuery, so anything accepted by the jQuery object is valid in this option. Defaults to `".item"`.
 
 ### The list of colors
 
