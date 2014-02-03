@@ -14,8 +14,9 @@
 						settings.colors[h] = settings.defaultColor;
 					}
 					else if(settings.colors[h].charAt(0) == '#') {
-						settings.colors[h] = {};
-						settings.colors[h][settings.cssProperty] = $.fn.gridcolor.hexToRGB(settings.colors[h].slice(1));
+						var obj = {};
+						obj[settings.cssProperty] = $.fn.gridcolor.hexToRGB(settings.colors[h].slice(1));
+						settings.colors[h] = obj;
 					}
 					else {
 						settings.colors[h] = {};
@@ -119,7 +120,7 @@
 	
 	$.fn.gridcolor.defaults = {
 		classMode : false,
-		colors : ["#777777", "#999999", "#bbbbbb", "#555555"],
+		colors : [ "#777777", "#999999", "#bbbbbb", "#555555" ],
 		columns : 3,
 		cssProperty : "background-color",
 		defaultColor : {
